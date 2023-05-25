@@ -7,9 +7,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 /* Start Header */
-.header {
-
-}
 .header .nav {
     background-color: #1e3a8a;
     margin: 0;
@@ -92,41 +89,71 @@ body {
         font-size: 0.8rem;
     }
 }
-.content .age {
+.content .status {
     margin-top: 1rem;
 }
 @media (max-width: 767px) {
-    .content .age {
+    .content .status {
         margin: 0;
         padding: 3rem 0 3rem;
     }
 }
-.content .age .title-age h2 {
-    margin: 0;
-    line-height: 2rem;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-@media (max-width: 767px) {
-    .content .age .title-age h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-}
-.content .age .age-options {
+.content .status .age-options,
+.content .status .us-options,
+.content .status .dental-benefits,
+.content .status .benefits-need {
+    display: block;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 1rem;
-    gap: 0.5rem;
 }
 @media (max-width: 767px) {
-    .content .age .age-options {
+    .content .status .age-options,
+    .content .status .us-options,
+    .content .status .dental-benefits,
+    .content .status .benefits-need {
         margin: 0;
     }
 }
-.content .age .age-options button {
+.content .age .age-options {
+    display: block;
+}
+.content .status .us-options {
+    display: none;
+}
+.content .status .dental-benefits {
+    display: none;
+}
+.content .status .benefits-need {
+    display: none;
+}
+.content .status .age-options h2,
+.content .status .us-options h2,
+.content .status .dental-benefits h2,
+.content .status .benefits-need h2 {
+    margin: 0;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #000000d4;
+}
+@media (max-width: 767px) {
+    .content .status .age-options h2,
+    .content .status .us-options h2,
+    .content .status .dental-benefits h2,
+    .content .status .benefits-need h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+.content .status .age-options button,
+.content .status .us-options button,
+.content .status .dental-benefits button,
+.content .status .benefits-need button {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
     width: 100%;
     border: none;
     background-color: #3b82f6;
@@ -146,10 +173,16 @@ body {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
 }
-.content .age .age-options button:hover {
+.content .status .age-options button:hover,
+.content .status .us-options button:hover,
+.content .status .dental-benefits button:hover,
+.content .status .benefits-need button:hover {
     opacity: 0.8;
 }
-.content .age .age-options button:focus {
+.content .status .age-options button:focus,
+.content .status .us-options button:focus,
+.content .status .dental-benefits button:focus,
+.content .status .benefits-need button:focus {
     width: 95%;
 }
 .content .footer {
@@ -194,3 +227,57 @@ body {
     font-size: 0.9rem;
 }
 /* End Content */
+/* Start Popup */
+.popup {
+    display: none;
+    background-color: #d1d5db;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0px 5px 11px #cfcfcf;
+    border-top: 2px solid #3b82f6;
+}
+.popup h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.popup h2 {
+    color: #16a34a;
+    margin: 0.8rem 0 0 0;
+    font-size: 1.4rem;
+}
+.popup button {
+    border: none;
+    background-color: #f97316;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.popup button:hover {
+    opacity: 0.8;
+}
+.popup p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+.popup span:first-child {
+    text-decoration: underline;
+}
+.popup span:last-child {
+    color: #ef4444;
+}
+/* End Popup */
